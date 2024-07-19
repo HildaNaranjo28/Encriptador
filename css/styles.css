@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Global CSS */
+:root {
+    --color-fondo: #F3F5FC;
+    --color-azul-oscuro: #0A3871;
+    --color-blanco: #FFFFFF;
+    --color-gris-medio: #D8DFE8;
+    --color-gris-claro: #495057;
+    --color-gris-oscuro: #343A40;
+
+    --fuente-inter: "Inter", sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-inter);
+    text-decoration: none;
+    background: var(--color-blanco);
+}
+
+::selection {
+    background: var(--color-azul-oscuro);
+    color: var(--color-blanco);
+}
+
+body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Encabezado */
+
+header {
+    position: absolute;
+    margin: 40px 0px 0px 40px;
+}
+
+header .logo {
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
+    background: var(--color-fondo);
+
+}
+
+/* Principal */
+
+main {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-fondo);
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+
+
+.encriptador {
+    width: 60%;
+    margin: 168px 0px 0px 140px;
+    background: transparent;
+}
+
+.encriptar {
+    width: 660px;
+    height: 288px;
+    font-weight: 400px;
+    font-size: 32px;
+    line-height: 48px;
+    outline: none;
+    border: 1px solid var(--color-gris-claro);
+    border-radius: 15px;
+    resize: none;
+    background: transparent;
+}
+
+.encriptar::placeholder, :focus {
+    color: var(--colo-azul-oscuro);
+}
+
+.encriptador-aviso {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  
+    gap: 8px;
+    position: absolute;
+    top: 500px;
+}
+
+.texto-aviso {
+    width: 100%;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 150%;
+    opacity: 0.8;
+    color: var(--color-gris-claro);
+    background-color: var(--color-fondo);
+}
+
+.encriptador-contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 526px;
+    background-color: var(--color-fondo)
+}
+
+.btn-encriptar {
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    margin-top: 80px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-blanco);
+    background: var(--color-azul-oscuro);
+    border: 1px solid var(--color-azul-oscuro);
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+
+.btn-desencriptar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    margin-top: 80px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-azul-oscuro);
+    background: var(--color-gris-medio);
+    border: 1px solid var(--color-azul-oscuro);
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.tarjeta{
+    width: 20%;
+    height: 90%;
+    background: var(--color-blanco);
+    box-shadow: 10px 24px 32px -8px var(--color-gris-oscuro);
+    position: relative;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.tarjeta-contenedor{
+    width: 250px;
+    margin: auto;
+    margin-top: 50%;
+    background: var(--color-blanco);
+}
+
+.img-muñeco{
+    background: var(--color-blanco);
+}
+
+.texto-uno{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--color-gris-claro);
+    background: var(--color-blanco);
+}
+
+.texto-dos{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-gris-oscuro);
+    background: var(--color-blanco);
+}
+
+.evaluar{
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--Gree);
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+}
+
+.evaluar:focus{
+    outline: none;
+}
+
+.btn-copiar{
+    width: 300px;
+    height: 67px;
+    margin: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    padding: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: var(--color-gris-medio);
+    border: 1px solid var(--color-azul-oscuro);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.btn-copiar:hover{
+    transform: scale(0.97);
+}
+
+/* Media */
+
+@media(max-width: 1250px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .encriptador{
+        margin: 168px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .encriptador-contenedor{
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .encriptador-aviso{
+        position: inherit;
+        margin: 15px;
+    }   
+    
+    .tarjeta{
+        width: 665px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .tarjeta-contenedor{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .img-muñeco{
+        display: none;
+    }
+
+    .btn-copiar{
+        position: inherit;
+        width: 100%;
+    }
+
+    .evaluar{
+        width: 100%;
+        height: 210px;
+        padding: 10px;
+    }
+}
+
+@media(max-width: 720px){
+    
+    header .logo{
+        width: 100%;
+        background: var(--);
+        padding: 2px;
+    }
+
+    .encriptar{
+        width:  90%;
+        font-size: 24px;
+    }
+
+    .encriptador-contenedor{
+        display: grid;
+        gap: 21px;
+    }
+
+    .tarjeta{
+        width: 90%;
+    }
+
+}
